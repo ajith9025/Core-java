@@ -50,13 +50,60 @@ public class BankDetails {
 	
 
 	public BankDetails(int accountNumber, String accountName, int amount, int balance) {
-		super();
+	
 		this.accountNumber = accountNumber;
 		this.accountName = accountName;
 		this.amount = amount;
 		this.balance = balance;
 	}
 
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
@@ -85,6 +132,11 @@ public class BankDetails {
 	public void setAccountnumber(int i) {
 		// TODO Auto-generated method stub
 
+	}
+
+	public void setAccountNumber(int nextInt) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

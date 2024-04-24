@@ -1,4 +1,4 @@
-package com.chainsys.day10;
+ package com.chainsys.day10;
 
 import java.util.Scanner;
 
@@ -15,7 +15,7 @@ public class TestProduct {
 		int n = sc.nextInt();
 		if (n == 1) {
 			System.out.println();
-			System.out.println("Enter the user name:(ex:ajith@2001)");
+			System.out.println("Enter the user name:");
 			String userName = sc.next();
 			while(true) {
 			if (userName.equals("ajith@123")) {
@@ -44,9 +44,16 @@ public class TestProduct {
 				System.out.println("Enter the productName:");
 				String productName = sc.next();
 				System.out.println("add to card :" + productName);
+				
+				
+				
+				System.out.println("Enter the Review");
+				String review = sc.next();
+				
+
 
 				groceryapp.purchase(items, qty, price);
-				groceryapp.purchase(productId, productName);
+				groceryapp.purchase(productId,review);
 				int totalPrice = 0;
 				groceryapp.purchase(price, qty, totalPrice);
 				break;

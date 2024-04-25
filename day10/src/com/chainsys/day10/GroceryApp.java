@@ -4,9 +4,10 @@ import java.util.Scanner;
 
 public class GroceryApp {
 
+
 	public static void purchase(String userName) {
 		System.out.println();
-		if (userName.matches("^[A-Za-a]+[@#$%!]+[0-9]+$")) {
+		if (userName.matches("^[A-Za-z]+[@#$%!]+[0-9]+$")) {
 			System.out.println("valid ");
 		} else
 			System.out.println("Invalid");
@@ -20,9 +21,10 @@ public class GroceryApp {
 		System.out.println("How many items: " + items + "  TotalQty: " + qty + " Price of Rs: " + price);
 	}
 
-	public static void purchase(int productId, String review) {
-		System.out.println("Product id: " + productId + " Review: " + review);
+	public static void purchase(int productId, String review){
 		
+		System.out.println("Product id: " + productId + " Review: " + review );
+
 	}
 
 	public static void purchase(int price, int qty, int totalPrice) {
@@ -33,6 +35,26 @@ public class GroceryApp {
 		} else
 			System.out.println("Invalid");
 
+	}
+	public static void option()
+	{
+		Scanner sc = new Scanner(System.in);
+		char option= sc.next().toLowerCase().charAt(0);
+
+		switch (option) {
+		case 'a':
+			System.out.println("Home");
+			break;
+		case 'b':
+			System.out.println("About us");
+			break;
+		case 'c':
+			System.out.println("Contacts");
+			break;
+		case 'd':
+			System.out.println("Products");
+			break;
+		}
 	}
 
 	public static void snacks() {
@@ -83,6 +105,18 @@ public class GroceryApp {
 			break;
 		}
 	}
+
+	public static void signup(String signup) {
+		
+			System.out.println("Signup successfully");
+	}
+		
+	public static void login(String login)
+	{
+		System.out.println("Login successfully");
+	}
 	
+	
+
 
 }

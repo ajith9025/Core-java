@@ -3,6 +3,10 @@ package com.chainsys.day10;
 import java.util.Scanner;
 
 public class Testproduct1 {
+
+	private static String signup;
+	private static String login;
+
 	@SuppressWarnings({ "static-access", "unused" })
 
 	public static void main(String[] args) {
@@ -10,12 +14,13 @@ public class Testproduct1 {
 		Scanner sc = new Scanner(System.in);
 		GroceryApp groceryapp = new GroceryApp();
 
-		System.out.println("Welcome to all the user of  this GroceryApp");
+		System.out.println(" Welcome to all the user of  the GroceryApp ");
 		System.out.println();
-		System.out.println("1)----------Login page----------\n2)----------Signup page----------");
+        System.out.println("   select the option(1 to 2)"   );
+		System.out.println();
+        System.out.println("1)----------Login page----------\n2)----------Signup page----------");
 		int n = sc.nextInt();
 		if (n == 1) {
-			System.out.println();
 			System.out.println("Enter the user name:");
 			String userName = sc.next();
 			while (true) {
@@ -23,13 +28,14 @@ public class Testproduct1 {
 					System.out.println("valid");
 					System.out.println("Enter the password:");
 					String password = sc.next();
+					GroceryApp.login(login);
 
 					double items = 3;
 //				while (items > 2) {
 //					System.out.println("we only have 2 items ");
 //					items = sc.nextDouble();
 //				}
-					System.out.println("choice the items");
+					System.out.println("select the product");
 					System.out.println("1.snacks");
 					System.out.println("2.vegetable");
 					System.out.println("3.fruits");
@@ -77,11 +83,8 @@ public class Testproduct1 {
 					}
 					System.out.println("Enter the Review");
 					sc.nextLine();
-				    String review = sc.nextLine();
-				    
-			        
-					
-
+					String review = sc.nextLine();
+					groceryapp.purchase(userName);
 					groceryapp.purchase(items, qty, price);
 					groceryapp.purchase(productId, review);
 					int totalPrice = 0;
@@ -108,11 +111,12 @@ public class Testproduct1 {
 			int d = sc.nextInt();
 			System.out.println("Enter the conform password:");
 			int e = sc.nextInt();
-			System.out.println("Signup successfully");
+			GroceryApp.signup(signup);
+
 		}
 
 		System.out.println();
-		System.out.println("Thanks for visiting  the GroceryApp");
+		System.out.println("Thank you for using the GroceryApp");
 
 		sc.close();
 	}

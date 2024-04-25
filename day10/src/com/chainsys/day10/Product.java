@@ -73,7 +73,7 @@ public class Product {
 	}
 	public Product(String userName, double password, double items, int productId, String productName, int qty,
 			int price, int totalPrice, String addToCard, String review) {
-		super();
+		
 		this.userName = userName;
 		this.password = password;
 		this.items = items;

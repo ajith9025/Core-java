@@ -79,6 +79,9 @@ public class GroceryApp {
 
 	public static void vegetable() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("a.potato");
+		System.out.println("b.tomato");
+		System.out.println("c.carrot");
  		char choice = sc.next().toLowerCase().charAt(0);
 		switch (choice) {
 		case 'a':
@@ -95,6 +98,9 @@ public class GroceryApp {
 
 	public static void fruits() {
 		Scanner sc = new Scanner(System.in);
+		System.out.println("a.mango");
+		System.out.println("b.orange");
+		System.out.println("c.apple");
 		char choice = sc.next().toLowerCase().charAt(0);
 		switch (choice) {
 		case 'a':

@@ -92,4 +92,4 @@ public class Product {
 				+ totalPrice + ", addToCard=" + addToCard + ", Review=" + review + "]";
 	}
 }
-
+	

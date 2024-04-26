@@ -6,6 +6,7 @@ public class Testproduct1 {
 
 	private static String signup;
 	private static String login;
+	
 
 	@SuppressWarnings({ "static-access", "unused" })
 
@@ -14,7 +15,7 @@ public class Testproduct1 {
 		Scanner sc = new Scanner(System.in);
 		GroceryApp groceryapp = new GroceryApp();
 
-		System.out.println(" Welcome to all the user of  the GroceryApp ");
+		System.out.println(" Welcome to all the user of the GroceryApp ");
 		System.out.println();
         System.out.println("   select the option(1 to 2)"   );
 		System.out.println();
@@ -35,6 +36,7 @@ public class Testproduct1 {
 //					System.out.println("we only have 2 items ");
 //					items = sc.nextDouble();
 //				}
+				
 					System.out.println("select the product");
 					System.out.println("1.snacks");
 					System.out.println("2.vegetable");
@@ -56,13 +58,14 @@ public class Testproduct1 {
 						break;
 
 					}
+					
 					System.out.println("add to card:" + choice);
 					System.out.println("Enter the total qty:");
 					int qty = sc.nextInt();
-					System.out.println("Enter the price Rs:");
-					int price = sc.nextInt();
-					System.out.println("Enter the productId:");
-					int productId = sc.nextInt();
+//					System.out.println("Enter the price Rs:");
+//					int price = sc.nextInt();
+//					System.out.println("Enter the productId:");
+	//				int productId = sc.nextInt();
 
 					System.out.println("Select the payment mode");
 					System.out.println("1.online cash");
@@ -81,25 +84,28 @@ public class Testproduct1 {
 						break;
 
 					}
+					System.out.println("Enter the location");
+					sc.next();
 					System.out.println("Enter the Review");
 					sc.nextLine();
 					String review = sc.nextLine();
 					groceryapp.purchase(userName);
-					groceryapp.purchase(items, qty, price);
-					groceryapp.purchase(productId, review);
+					groceryapp.purchase(items, qty, 10);
+					groceryapp.purchase(125, review);
 					int totalPrice = 0;
-					groceryapp.purchase(price, qty, totalPrice);
+					groceryapp.purchase(10, qty, totalPrice);
 					break;
-
-				} else {
-					System.out.println("Invaid(add the special character and numbers)");
+					 
+		    }  
+				 else {
+					System.out.println("Invalid(add the special character and numbers)");
 
 					userName = sc.next();
 
 				}
 			}
 
-		}
+	
 		if (n == 2) {
 			System.out.println("Enter the first name:");
 			String a = sc.next();
@@ -121,4 +127,5 @@ public class Testproduct1 {
 		sc.close();
 	}
 
+	}
 }

@@ -1,6 +1,8 @@
 package com.chainsys.day10;
 
+import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.Set;
 
 public class Testproduct1 {
 
@@ -14,8 +16,10 @@ public class Testproduct1 {
 
 		Scanner sc = new Scanner(System.in);
 		GroceryApp groceryapp = new GroceryApp();
-
-		System.out.println(" Welcome to all the user of the GroceryApp ");
+		
+		ABCGrocery grocery=new ABCGrocery();
+		grocery.addToWelcome();
+		
 		System.out.println();
         System.out.println("   select the option(1 to 2)"   );
 		System.out.println();
@@ -36,12 +40,12 @@ public class Testproduct1 {
 //					System.out.println("we only have 2 items ");
 //					items = sc.nextDouble();
 //				}
-				
-					System.out.println("select the product");
+				 
+				    System.out.println("select the product");
 					System.out.println("1.snacks");
-					System.out.println("2.vegetable");
+				    System.out.println("2.vegetable");
 					System.out.println("3.fruits");
-					int choice = sc.nextInt();
+				    int choice = sc.nextInt();
 
 					switch (choice) {
 					case 1:
@@ -60,6 +64,7 @@ public class Testproduct1 {
 					}
 					
 					System.out.println("add to card:" + choice);
+				    
 					System.out.println("Enter the total qty:");
 					int qty = sc.nextInt();
 //					System.out.println("Enter the price Rs:");
@@ -84,16 +89,19 @@ public class Testproduct1 {
 						break;
 
 					}
-					System.out.println("Enter the location");
-					sc.next();
-					System.out.println("Enter the Review");
-					sc.nextLine();
-					String review = sc.nextLine();
+					System.out.println();
+					ABCGrocery grocery1=new ABCGrocery();
+					grocery1.addToAddress();
+					grocery1.location();
+					grocery1.customerName();
+		            grocery1.review();
+
 					groceryapp.purchase(userName);
 					groceryapp.purchase(items, qty, 10);
-					groceryapp.purchase(125, review);
+					groceryapp.purchase(125);
 					int totalPrice = 0;
 					groceryapp.purchase(10, qty, totalPrice);
+				
 					break;
 					 
 		    }  
@@ -122,8 +130,8 @@ public class Testproduct1 {
 		}
 
 		System.out.println();
-		System.out.println("Thank you for using the GroceryApp");
-
+		ABCGrocery grocery1=new ABCGrocery();
+		grocery1.thanksInformation();
 		sc.close();
 	}
 
